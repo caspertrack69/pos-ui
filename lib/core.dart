@@ -38,7 +38,7 @@ export 'package:pos_ui/module/onboarding/widget/ripple.dart';
 export 'package:pos_ui/module/onboarding/widget/textColumn.dart';
 export 'package:pos_ui/module/produk/controller/produk_controller.dart';
 export 'package:pos_ui/module/produk/view/produk_view.dart';
-export 'package:pos_ui/module/register/controller/register_controller.dart';
+
 export 'package:pos_ui/module/register/view/register_view.dart';
 export 'package:pos_ui/module/transaksi/controller/transaksi_controller.dart';
 export 'package:pos_ui/module/transaksi/view/transaksi_view.dart';

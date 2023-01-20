@@ -127,7 +127,7 @@ class _LoginViewState extends State<LoginView>
                 child: child,
               );
             },
-            child: Container(color: kBlue),
+            child: Container(color: kLightBlue),
           ),
           AnimatedBuilder(
             animation: _blueTopClipperAnimation,

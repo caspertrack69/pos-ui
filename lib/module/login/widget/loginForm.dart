@@ -47,7 +47,7 @@ class LoginForm extends StatelessWidget {
             animation: animation,
             additionalOffset: 2 * space,
             child: CustomButton(
-              color: kBlue,
+              color: kLightBlue,
               textColor: kWhite,
               text: 'Login to continue',
               onPressed: () {
@@ -85,7 +85,8 @@ class LoginForm extends StatelessWidget {
               onPressed: () {
                 Navigator.push(
                   context,
-                  MaterialPageRoute(builder: (context) => const RegisterView()),
+                  // ignore: prefer_const_constructors
+                  MaterialPageRoute(builder: (context) => RegisterView()),
                 );
               },
             ),
