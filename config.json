@@ -1,0 +1,12 @@
+{
+    "openai_key": "",
+    "modules": [
+        "login",
+        "register",
+        "dashboard",
+        "user",
+        "transaksi",
+        "produk",
+        "onboarding"
+    ]
+}
