@@ -1,29 +1,42 @@
 import 'package:flutter/material.dart';
-import 'package:pos_ui/core.dart';
-import '../controller/onboarding_controller.dart';
 
-class OnboardingView extends StatefulWidget {
-  const OnboardingView({Key? key}) : super(key: key);
+import '../../../constants.dart';
+import 'package:pos_ui/module/onboarding/widget/cardStack.dart';
 
-  Widget build(context, OnboardingController controller) {
-    controller.view = this;
+class OnboardingView extends StatelessWidget {
+  final int number;
+  final Widget lightCardChild;
+  final Widget darkCardChild;
+  final Animation<Offset> lightCardOffsetAnimation;
+  final Animation<Offset> darkCardOffsetAnimation;
+  final Widget textColumn;
 
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text("Onboarding"),
-        actions: const [],
-      ),
-      body: SingleChildScrollView(
-        child: Container(
-          padding: const EdgeInsets.all(10.0),
-          child: Column(
-            children: const [],
-          ),
-        ),
-      ),
-    );
-  }
+  const OnboardingView({
+    required this.number,
+    required this.lightCardChild,
+    required this.darkCardChild,
+    required this.lightCardOffsetAnimation,
+    required this.darkCardOffsetAnimation,
+    required this.textColumn,
+  });
 
   @override
-  State<OnboardingView> createState() => OnboardingController();
+  Widget build(BuildContext context) {
+    return Column(
+      children: <Widget>[
+        CardsStack(
+          pageNumber: number,
+          lightCardChild: lightCardChild,
+          darkCardChild: darkCardChild,
+          lightCardOffsetAnimation: lightCardOffsetAnimation,
+          darkCardOffsetAnimation: darkCardOffsetAnimation,
+        ),
+        SizedBox(height: number % 2 == 1 ? 50.0 : 25.0),
+        AnimatedSwitcher(
+          duration: kCardAnimationDuration,
+          child: textColumn,
+        ),
+      ],
+    );
+  }
 }
