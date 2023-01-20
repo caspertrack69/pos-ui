@@ -1,8 +1,10 @@
 import 'package:flutter/material.dart';
 import 'package:pos_ui/constants.dart';
+import 'package:pos_ui/core.dart';
 import 'customButton.dart';
 import 'customInputField.dart';
 import 'fadeSlideTransition.dart';
+import 'package:pos_ui/module/dashboard/view/dashboard_view.dart';
 
 class LoginForm extends StatelessWidget {
   final Animation<double> animation;
@@ -48,7 +50,13 @@ class LoginForm extends StatelessWidget {
               color: kBlue,
               textColor: kWhite,
               text: 'Login to continue',
-              onPressed: () {},
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(
+                      builder: (context) => const DashboardView()),
+                );
+              },
             ),
           ),
           SizedBox(height: 2 * space),
@@ -73,8 +81,13 @@ class LoginForm extends StatelessWidget {
             child: CustomButton(
               color: kBlack,
               textColor: kWhite,
-              text: 'Create a Bubble Account',
-              onPressed: () {},
+              text: 'Create a POS Account',
+              onPressed: () {
+                Navigator.push(
+                  context,
+                  MaterialPageRoute(builder: (context) => const RegisterView()),
+                );
+              },
             ),
           ),
         ],

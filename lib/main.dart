@@ -1,3 +1,4 @@
+import 'package:pos_ui/state_util.dart';
 import 'package:flutter/material.dart';
 import 'package:pos_ui/core.dart';
 
@@ -8,7 +9,8 @@ class App extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       debugShowCheckedModeBanner: false,
-      title: 'Onboarding Concept',
+      title: 'POS',
+navigatorKey: Get.navigatorKey,
       home: Builder(
         builder: (BuildContext context) {
           final screenHeight = MediaQuery.of(context).size.height;

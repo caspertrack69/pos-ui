@@ -26,7 +26,7 @@ class Header extends StatelessWidget {
             animation: animation,
             additionalOffset: 0.0,
             child: Text(
-              'Welcome to Bubble',
+              'Welcome to POS',
               style: Theme.of(context)
                   .textTheme
                   .headline5!
