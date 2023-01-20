@@ -7,7 +7,6 @@ export 'package:pos_ui/module/dashboard/controller/dashboard_controller.dart';
 export 'package:pos_ui/module/dashboard/view/dashboard_view.dart';
 export 'package:pos_ui/module/login/controller/login_controller.dart';
 export 'package:pos_ui/module/login/view/login_view.dart';
-export 'package:pos_ui/module/onboarding/controller/onboarding_controller.dart';
 export 'package:pos_ui/module/onboarding/view/onboarding_view.dart';
 export 'package:pos_ui/module/produk/controller/produk_controller.dart';
 export 'package:pos_ui/module/produk/view/produk_view.dart';

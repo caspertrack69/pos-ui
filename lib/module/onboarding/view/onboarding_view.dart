@@ -1,5 +1,4 @@
 import 'package:flutter/material.dart';
-
 import '../../../constants.dart';
 import 'package:pos_ui/module/onboarding/widget/cardStack.dart';
 
@@ -12,6 +11,7 @@ class OnboardingView extends StatelessWidget {
   final Widget textColumn;
 
   const OnboardingView({
+    super.key,
     required this.number,
     required this.lightCardChild,
     required this.darkCardChild,
